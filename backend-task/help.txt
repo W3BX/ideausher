@@ -1,0 +1,53 @@
+command - yarn / npm to import modules
+command - nodemon/ node index.js
+
+Structure -
+/Backend-task
+    /controllers
+        postController
+    /models
+        postModel
+        tagModel
+    /routes
+        index
+        postRouter
+    /tempdir
+dbconfig
+index
+{google-key-file}
+package
+...
+
+NOTE: This project is connected with MongoDB atlas. you can check dbConfig.js for more help
+NOTE: There is no front-end for this project. it is recommended to use tools like POSTMAN etc for testing purpose.
+NOTE: Google_Cloud is use for storing images
+ 
+Q) Make an endpoint to get all posts and apply filter, sort, and pagination to the same endpoint ?
+Method : GET
+tesing : localhost:5000/post?filter=&sort=asc&page=1
+
+Q) Make an endpoint to search keywords in the title and description ?
+Method : GET
+testing : localhost:5000/post/search?query=qui est esse
+
+Q) Make an endpoint to filter posts using tags ?
+Method : GET
+testing : localhost:5000/post/tags/64490a3517d0f1a7c2d221c3
+
+Q) Upload post image to cloud services (AWS S3 or others...)
+Method : POST
+**POSTMAN settings**
+** 
+make sure this setting is enable in Headers 
+KEY          : VALUE 
+Content-Type : multipart/form-data 
+**
+**
+make sure this setting is enable in BODY select form-data
+KEY          : VALUE 
+file {type:file} : "any_file_you want" 
+the word "file" for key is mandatory
+**
+
+testing : localhost:5000/post/upload/6449036e17d0f1a7c2d221b9
+

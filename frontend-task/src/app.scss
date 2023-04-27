@@ -1,0 +1,15 @@
+.error_div{
+    text-align: center;
+    .error_no{
+        font-size: 8rem;
+        color: tomato;
+        -webkit-text-stroke-width: 0.1rem;
+        -webkit-text-stroke-color: red;
+        font-family: cursive;
+    }
+    .error_text{
+        line-height: 0px;
+        white-space: nowrap;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
